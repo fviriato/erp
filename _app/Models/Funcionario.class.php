@@ -20,6 +20,7 @@ class Funcionario {
     private $Salario;
     private $Error;
     private $Result;
+    public $FuncionarioId;
 
     function getError() {
         return $this->Error;
@@ -28,7 +29,7 @@ class Funcionario {
     function getResult() {
         return $this->Result;
     }
-    
+
     public function ExeCreate(array $Data) {
         $this->Data = $Data;
         $this->PriNome = (string) ucfirst(strtolower(strip_tags($Data['pri_nome'])));
@@ -53,6 +54,9 @@ class Funcionario {
             $this->Result = false;
         elseif (!$this->DataNasc):
             $this->Error = ["Informar a data de nascimento do funcionário(a) {$this->PriNome} {$this->MeioNome} {$this->Sobrenome}!", WS_ALERT];
+            $this->Result = false;
+        elseif ($this->DataNasc > date('Y-m-d')):
+            $this->Error = ["A data de nascimento informada é superior à data de hoje!", WS_ALERT];
             $this->Result = false;
         elseif (!$this->Sexo):
             $this->Error = ["Informar sexo do funcionário(a) {$this->PriNome} {$this->MeioNome} {$this->Sobrenome}!", WS_ALERT];
@@ -95,8 +99,9 @@ class Funcionario {
             $Create->ExeCreate('funcionario', $this->Data);
 
             if ($Create->getResult()):
-                $this->Error = ["Funcionário <b>{$this->PriNome} {$this->MeioNome} {$this->Sobrenome}</b> cadastrado com sucesso!", WS_ACCEPT];
+                $this->Error = ["Os dados do funcionário <b>{$this->PriNome} {$this->MeioNome} {$this->Sobrenome}</b> foram gravados com sucesso! Prossiga com as demais informações", WS_ACCEPT];
                 $this->Result = true;
+                $this->FuncionarioId = $Create->getResult();
             else:
                 $this->Error = ["Erro: Não foi possível efetuar o cadastro no sistema!", WS_ERROR];
                 $this->Result = false;

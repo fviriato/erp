@@ -7,7 +7,7 @@ require('../_app/Config.inc.php');
     <head>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/admin.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
         <meta charset="UTF-8">
         <title></title>
     </head>
@@ -65,6 +65,5 @@ require('../_app/Config.inc.php');
         <footer>
             <h4>Rodape</h4>
         </footer>
-
     </body>
 </html>

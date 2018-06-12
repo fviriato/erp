@@ -25,7 +25,7 @@ class Endereco {
         $this->Complemento = $DataEndereco['complemento'];
         $this->Bairro = ucfirst(strtolower(strip_tags($DataEndereco['bairro'])));
         $this->Cidade = ucfirst(strtolower(strip_tags($DataEndereco['cidade'])));
-        $this->Estado = $DataEndereco['estado'];
+        $this->Estado = $DataEndereco['uf'];
         $this->checkData();
     }
 

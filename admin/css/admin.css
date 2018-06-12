@@ -42,7 +42,7 @@ body footer{margin: 0 auto;width:85%; height: 75px; background-color: #dcdde1; f
 #logout{width: 60px; height: 30px; margin-right: 20px;margin-top: -32.5px; color: #f5f6fa;}
 #logout a{color: #d2dae2; text-decoration: none}
 #frame{ width: 85%; margin-left: 15%; margin-top: 0px; margin-bottom: 30px; padding: 25px;background-color: #F5F5F5; clear: both}
-#conteudo{ width: 98%; margin-left: 15px; margin-top: 90px; margin-bottom: 30px; padding: 35px; background-color: #FFFFFF; border-radius: 0.1em; border: 0.1em solid #DCDCDC; clear: both}
+#conteudo{ width: 98%; margin-left: 15px; margin-top: 90px; padding: 35px; background-color: #FFFFFF; border-radius: 0.1em; border: 0.1em solid #DCDCDC; clear: both}
 
 /*FLOATS*/
 .right{float: right !important;}

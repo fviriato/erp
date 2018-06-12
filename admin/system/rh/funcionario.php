@@ -82,13 +82,9 @@ endif;
                     Pesquisar Departamento
                 </div>
             </div>
-
-
-
             <hr>
-
         </div>
-        <script src="../../js/jquery.js"></script>
-        <script src="../../js/funcoes.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/funcoes.js"></script>
     </body>
 </html>
