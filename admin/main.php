@@ -1,20 +1,22 @@
 <?php
+session_start();
+
 require('../_app/Config.inc.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+        <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">-->
         <link rel="stylesheet" href="css/admin.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">-->
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
 
         <header>
-            <a href="#"id="logout">Logout</a>            
+            <a href="../logout.php"id="logout">Logout</a>            
         </header>
 
 

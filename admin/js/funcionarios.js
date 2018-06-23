@@ -3,7 +3,7 @@ $(function () {
         var PersonalData = $(this).serialize();
 
         $.ajax({
-            url: 'ajax/funcionarios.php',
+            url: './app/Models/funcionarios.class.php',
             data: PersonalData,
             Type: 'POST',
             dataType: 'jSon',
