@@ -1,13 +1,12 @@
 <?php
 session_start();
-
 require('../_app/Config.inc.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">-->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/admin.css" type="text/css">
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">-->
         <meta charset="UTF-8">
@@ -16,16 +15,14 @@ require('../_app/Config.inc.php');
     <body>
 
         <header>
-            <a href="../logout.php"id="logout">Logout</a>            
+            <a href= "../logout.php"id="logout">Logout</a>            
         </header>
-
 
         <nav>
             <div id="logo">
+                <span class="bg-primary">logotipo</span>
             </div>
-            <h4>Menu</h4>
-            <!--            <a href="main.php?url=system/cliente/create.php">Cadastrar Cliente</a><br>
-                        <a href="main.php?url=system/cliente/update.php">Update Cliente</a>-->
+            <h4 class="text-success">Menu</h4>
             <?php
             $Menu = new Read;
             $Menu->ExeRead("menu", "WHERE exibir='sim'");
@@ -45,7 +42,6 @@ require('../_app/Config.inc.php');
                         endforeach;
                         echo '</ul>';
                     endif;
-
                     echo '</li>';
                 endforeach;
                 echo '</ul>';
@@ -62,8 +58,6 @@ require('../_app/Config.inc.php');
                 ?>
             </div>
         </div>
-
-
         <footer>
             <h4>Rodape</h4>
         </footer>
